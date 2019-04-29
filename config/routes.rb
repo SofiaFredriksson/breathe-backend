@@ -5,6 +5,8 @@ Rails.application.routes.draw do
       resources :categories, only: [:index, :show]
       resources :activities, only: [:index, :show, :create]
       resources :reflections, only: [:index, :show, :create, :delete]
+
+      post "/login", to: "auth#login"
     end
   end
 end
