@@ -45,7 +45,7 @@ act23 = Activity.create(title: 'Plan an excursion', description: 'Plan a nature 
 act24 = Activity.create(title: 'Meditate', description: 'Find a quiet area close to your office (prefferably outdoors). Spend 30 minutes sitting quietly. Focus on your breathing and try to listen to every noise around you.', time: 30, category: cat4)
 
 
-user1 = User.create(username: 'U1', first_name: 'Fia', last_name: 'Fredriksson')
+user1 = User.create(username: 'U1', first_name: 'Fia', last_name: 'Fredriksson', password: '123')
 
 refl1 = Reflection.create(content: 'This felt like a waste of time, but I do feel a bit better', score: 4, user: user1, activity: act5)
 refl1 = Reflection.create(content: 'Loved it!', score: 8, user: user1, activity: act1)
