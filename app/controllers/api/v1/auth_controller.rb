@@ -8,4 +8,15 @@ def login
     render json: {error: 'User not found'}
   end
 end
+
+def get_current_user
+  @user = User.find_by(id: request.headers["Authorization"])
+
+  if @user
+    render json: @user
+  else
+    render json: {error: 'User not found'}
+  end
+end
+
 end
