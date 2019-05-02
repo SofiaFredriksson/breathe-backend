@@ -12,9 +12,10 @@ class Api::V1::UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      render json: @user
+      token = JWT.encode({user_id: @user.id}, "super_secret_key")
+      render json: {user: UserSerializer.new(@user), token: token}
     else
-      render json: {error: "Failed to create user"}
+      render json: {error: "Try again"}
     end
   end
 
