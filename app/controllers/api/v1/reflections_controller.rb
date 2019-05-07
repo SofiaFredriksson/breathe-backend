@@ -5,7 +5,7 @@ class Api::V1::ReflectionsController < ApplicationController
   end
 
   def show
-    @reflection = Reflection.find(params[:id])
+    @reflection = Reflection.find_by(id: params[:id])
     render json: @reflection
   end
 
@@ -14,7 +14,17 @@ class Api::V1::ReflectionsController < ApplicationController
     if @reflection.save
       render json: @reflection
     else
-      render json: {error: 'Failed to create reflection'}
+      render json: {error: 'Try again'}
+    end
+  end
+
+  def destroy
+    @reflection = Reflection.find_by(id: params[:id])
+    if @reflection
+      @reflection.delete
+      render json: @reflection
+    else
+      render json: {error: 'Try again'}
     end
   end
 
