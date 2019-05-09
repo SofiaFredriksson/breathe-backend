@@ -49,7 +49,7 @@ user1 = User.create(username: 'U1', first_name: 'Fia', last_name: 'Fredriksson',
 
 refl1 = Reflection.create(content: 'This felt like a waste of time, but I do feel a bit better', score: 4, user: user1, activity: act5)
 refl1 = Reflection.create(content: 'Loved it!', score: 8, user: user1, activity: act1)
-refl1 = Reflection.create(content: 'Making a new friend was scary but asking them the insect question was fun', score: 7, user: user1, activity: act4)
-refl1 = Reflection.create(content: 'I was scared but it was fun to try something new', score: 8, user: user1, activity: act4)
-refl1 = Reflection.create(content: 'This made me feel more relaxed', score: 8, user: user1, activity: act3)
-refl1 = Reflection.create(content: 'Picking flowers made the run way more fun!', score: 8, user: user1, activity: act2)
+refl1 = Reflection.create(content: 'Making a new friend was scary but asking them the insect question was fun', score: 7, user: user1, activity: act2)
+refl1 = Reflection.create(content: 'I was scared but it was fun to try something new', score: 8, user: user1, activity: act6)
+refl1 = Reflection.create(content: 'This made me feel more relaxed', score: 8, user: user1, activity: act16)
+refl1 = Reflection.create(content: 'Picking flowers made the run way more fun!', score: 8, user: user1, activity: act17)
